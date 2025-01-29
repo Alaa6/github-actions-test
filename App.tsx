@@ -1,7 +1,6 @@
 
 
 import React, { useEffect } from 'react';
-import * as Updates from 'expo-updates';
 import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
@@ -21,17 +20,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-async function checkForUpdates() {
-  try {
-    const update = await Updates.checkForUpdateAsync();
-    if (update.isAvailable) {
-      await Updates.fetchUpdateAsync();
-      await Updates.reloadAsync();
-    }
-  } catch (error) {
-    console.log("Error checking for updates:", error);
-  }
-}
+
 
 
 type SectionProps = PropsWithChildren<{
@@ -41,9 +30,7 @@ type SectionProps = PropsWithChildren<{
 function Section({ children, title }: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  useEffect(() => {
-    checkForUpdates();
-  }, []);
+
 
   return (
     <View style={styles.sectionContainer}>

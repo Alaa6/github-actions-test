@@ -1,4 +1,20 @@
 {
   "name": "NewProject",
-  "displayName": "NewProject"
+  "displayName": "NewProject",
+  "android": {
+    "package": "com.alaaashraf6.newproject"
+  },
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "d463241e-491d-44df-a6c7-776f30492e6a"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/d463241e-491d-44df-a6c7-776f30492e6a"
+    },
+    "android": {},
+    "ios": {}
+  }
 }
