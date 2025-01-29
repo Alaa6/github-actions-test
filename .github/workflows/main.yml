@@ -32,10 +32,10 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Android SDK
-        uses: android-actions/setup-android@v4
+        uses: android-actions/setup-android@v3
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
          distribution: 'temurin'  
          java-version: '17'  
@@ -94,7 +94,7 @@ jobs:
           xcodebuild -workspace YourProject.xcworkspace -scheme YourProject -sdk iphoneos -configuration Release build
 
       - name: Upload iOS Build Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: ios-build
           path: ios/build/
