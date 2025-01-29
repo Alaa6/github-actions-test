@@ -37,8 +37,8 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-         distribution: 'temurin'  # يمكن تغييره إلى 'adopt' أو 'zulu' حسب الحاجة
-         java-version: '17'  # أو '11' حسب متطلبات المشروع
+         distribution: 'temurin'  
+         java-version: '17'  
 
 
       - name: Build Android APK
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: android-apk
-          path: android/app/build/outputs/apk/release/app-release1.apk
+          path: android/app/build/outputs/apk/release/app-release.apk
 
   build-ios:
     name: Build iOS
