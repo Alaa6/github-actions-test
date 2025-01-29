@@ -31,8 +31,15 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Setup Java and Android SDK
+      - name: Android SDK
         uses: android-actions/setup-android@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+        #  distribution: 'temurin'  # يمكن تغييره إلى 'adopt' أو 'zulu' حسب الحاجة
+         java-version: '17'  # أو '11' حسب متطلبات المشروع
+
 
       - name: Build Android APK
         run: |
